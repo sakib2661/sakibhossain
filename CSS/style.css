@@ -10,34 +10,55 @@ a{
 
 #navBar{
     width:100%;
-    background-color:rgb(1, 29, 41);
-    height:60px;
+    background-color: rgb(1, 29, 41);
+    height: auto;
+    min-height: 50px;
     margin:0;
-    padding:0;
+    padding: 12px 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-#navBar,ul{
-    display:flex;
+#navBar > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#navBar ul {
+    display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    margin:0;
-    padding: 10px;
+    margin: 0;
+    padding: 10px 0 15px 0;
+    width: 100%;
+    background-color: rgb(1, 29, 41); /* Ensures background is solid/non-transparent */
 }
 
-#navBar,ul,li{
-    padding:10px;
+#navBar ul.active {
+    display: flex; /* Appears centered and pushes content down */
 }
 
-#navBar,ul,li,a{
+#navBar ul li {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#navBar ul li a {
     text-decoration: none;
     font-size: 20px;
     color: white;
     transition: box-shadow 0.3s ease; 
 }
 
-#navBar ul li a:hover{
+#navBar ul li a:hover {
     font-size: 25px;
     border: 2px solid;
     border-radius: 10px;
@@ -45,24 +66,22 @@ a{
     padding: 5px;
 }
 
-/* Mobile Menu Toggle Button Styles */
 .menu-toggle {
-    display: none; /* Hidden by default on desktop/large screens */
+    display: block; 
     font-size: 26px;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    left: 20px;
+    padding: 5px;
+    margin: 0 auto; /* Centers the menu icon horizontally in the navbar */
 }
 
 #hero{
     width:100%;
 }
 
-#hero,img{
+#hero img{
     width:100%;
 }
 
@@ -78,18 +97,19 @@ a{
     justify-content: center;
     padding:10px;
 }
+
 #subProjects{
     width:90%;
-    border:3px solid black;
     margin: 10px;
     padding: 10px;
     border-radius:10px;
 }
+
 .pSub {
-    border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
 }
+
 .pCss {
     border: 2.2px solid gray;
     border-radius: 10px;
@@ -97,16 +117,18 @@ a{
     margin: 10px;
     transition: transform 0.3s ease;
 }
+
 .pCss img{
     border: 1.5px solid black;
     border-radius: 10px;
-    height:200px;
     width: 100%;
     object-fit: cover;
 }
+
 .pCss div{
     text-align: center;
 }
+
 .pCss div button{
     padding:7px;
     color: white;
@@ -167,7 +189,7 @@ a{
   transition: color 0.3s;
 }
 #fb:hover i { color: #1877f2; }
-#x:hover i { color:  #ffffff;; }
+#x:hover i { color: #ffffff; }
 #linkedin:hover i { color: #0077b5; }
 #youtube:hover i { color: #ff0000; }
 #instagram:hover {
@@ -185,55 +207,11 @@ footer{
     text-align:center;
     padding: 20px;
 }
-
-/* Mobile Screen Adjustments (< 700px) */
-@media(max-width: 699px) {
-    .menu-toggle {
-        display: block; /* Shows the menu button exclusively on mobile phones */
-    }
-
-    #navBar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    #navBar > div {
-        width: 100%;
-    }
-
-    #navBar ul {
-        display: none; /* Hidden by default until toggled */
-        flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    #navBar ul.active {
-        display: flex; /* Opens the dropdown menu when clicked */
-    }
-
-    #navBar ul li {
-        width: 100%;
-        text-align: center;
-        padding: 8px 0;
-    }
-
-    /* Removes outer borders on mobile projects section, leaving only pSub border */
-    #subProjects {
-        border: none;
-        padding: 0;
-        width: 100%;
-    }
-
-    .pCss {
-        border: none;
-        margin: 15px 0;
-    }
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
-/* Desktop Screen Rules (>= 700px) */
 @media(min-width: 700px){
     #projects{
         width: 100%;
