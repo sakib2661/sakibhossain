@@ -14,6 +14,7 @@ a{
     height:60px;
     margin:0;
     padding:0;
+    position: relative;
 }
 
 #navBar,ul{
@@ -44,6 +45,19 @@ a{
     padding: 5px;
 }
 
+/* Mobile Menu Toggle Button Styles */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop/large screens */
+    font-size: 26px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+}
+
 #hero{
     width:100%;
 }
@@ -71,6 +85,11 @@ a{
     padding: 10px;
     border-radius:10px;
 }
+.pSub {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
 .pCss {
     border: 2.2px solid gray;
     border-radius: 10px;
@@ -82,6 +101,8 @@ a{
     border: 1.5px solid black;
     border-radius: 10px;
     height:200px;
+    width: 100%;
+    object-fit: cover;
 }
 .pCss div{
     text-align: center;
@@ -93,6 +114,7 @@ a{
     border: none;
     border-radius: 8px; 
     font-weight: bold;
+    cursor: pointer;
 }
 
 #about{
@@ -164,6 +186,54 @@ footer{
     padding: 20px;
 }
 
+/* Mobile Screen Adjustments (< 700px) */
+@media(max-width: 699px) {
+    .menu-toggle {
+        display: block; /* Shows the menu button exclusively on mobile phones */
+    }
+
+    #navBar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    #navBar > div {
+        width: 100%;
+    }
+
+    #navBar ul {
+        display: none; /* Hidden by default until toggled */
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #navBar ul.active {
+        display: flex; /* Opens the dropdown menu when clicked */
+    }
+
+    #navBar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    /* Removes outer borders on mobile projects section, leaving only pSub border */
+    #subProjects {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .pCss {
+        border: none;
+        margin: 15px 0;
+    }
+}
+
+/* Desktop Screen Rules (>= 700px) */
 @media(min-width: 700px){
     #projects{
         width: 100%;
@@ -173,6 +243,7 @@ footer{
     .pSub{
         display: flex;
         justify-content: center;
+        border: none;
     }
     .pCss:hover {
         transform: scale(1.1);

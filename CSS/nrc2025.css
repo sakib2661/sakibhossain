@@ -1,0 +1,58 @@
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.image-swapper {
+  text-align: center;
+  margin: 30px 0;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.image-swapper img {
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.swap-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.swap-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.swap-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.article-body, 
+.article-body h2, 
+.article-body p, 
+.article-body li {
+  color: #000000;
+}

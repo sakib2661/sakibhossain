@@ -10,16 +10,53 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/eeeDay2026.css" />
+    <link rel="stylesheet" href="../CSS/nrc2025.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div data-include="components/header.html"></div>
+
+    <div class="article-container">
+      <h1>National Robotics Championship 2025 (NRC 2025) at the Bangladesh University of Business and Technology (BUBT) in Dhaka, Bangladesh.</h1>
+
+      <img src="../IMAGES/nrc2025/heroNrc2025.png" alt="National Robotics Championship 2025 Team Photo" class="hero-image" />
+
+      <div class="article-body">
+        <p>
+          Participating in the National Robotics Championship 2025 (NRC 2025) at the Bangladesh University of Business and Technology (BUBT) in Dhaka was a major milestone for me. It was my very first robotics competition, and I entered the track alongside my batchmate, Adnan Hossain. The event took place at BUBT's outdoor sports complex, where energy, excitement, and innovation filled the open field as teams lined up their custom-built robots.
+        </p>
+
+        <p>
+          However, our maiden run didn't go as planned. Once our robot was placed on the field, it refused to move entirely. During indoor testing and preparation in the lab, our infrared (IR) sensors worked reliably. What we hadn't realized before competing outdoors was that natural sunlight contains high levels of infrared light, which completely overrides and saturates unshielded IR sensors. Because the track was set up in an open sports complex under direct sunlight, our robot was essentially blinded from the start.
+        </p>
+
+        <!-- Image Carousel Section for Bots -->
+        <div class="image-swapper">
+          <img id="botDisplay" src="../IMAGES/nrc2025/bots1.jpg" alt="Participant Bots Showcase" />
+          <div class="swap-controls">
+            <button class="swap-btn" onclick="prevBotImage()"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+            <button class="swap-btn" onclick="nextBotImage()">Next <i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <p>
+          Analyzing our setup after the trial, we realized a critical structural piece was missing: physical sensor shielding. We needed a protective front bracket around the IR sensors to block ambient sunlight and allow the photodiode to detect only the reflected signals from the track surface.
+        </p>
+
+        <h2>What I Learned</h2>
+        <ul>
+          <li><strong>Sunlight Interference on IR Sensors:</strong> Outdoor light conditions—like those at the open sports complex field—severely impair exposed IR sensors. Indoor testing is never sufficient for outdoor venues.</li>
+          <li><strong>Importance of Sensor Brackets:</strong> Mounting physical protective brackets in front of the sensors is essential to shade them from direct and reflected ambient sunlight.</li>
+          <li><strong>Building a Better Baseline:</strong> Failing at NRC 2025 became my biggest learning experience. Following this competition, I made it a strict rule to design and install protective sensor brackets on every bot I build for future competitions.</li>
+        </ul>
+      </div>
+    </div>
 
     <div data-include="components/social.html"></div>
 
     <div data-include="components/footer.html"></div>
 
     <script src="../JavaScript/include.js"></script>
+    <script src="../JavaScript/nrc2025.js"></script> 
   </body>
 </html>
