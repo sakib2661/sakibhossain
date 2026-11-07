@@ -10,9 +10,8 @@ a{
 
 #navBar{
     width:100%;
-    background-color: rgb(1, 29, 41);
+    background-color: rgb(1, 29, 41); 
     height: auto;
-    min-height: 50px;
     margin:0;
     padding: 12px 20px;
     position: relative;
@@ -38,11 +37,11 @@ a{
     margin: 0;
     padding: 10px 0 15px 0;
     width: 100%;
-    background-color: rgb(1, 29, 41); /* Ensures background is solid/non-transparent */
+    background-color: rgb(1, 29, 41); 
 }
 
 #navBar ul.active {
-    display: flex; /* Appears centered and pushes content down */
+    display: flex; 
 }
 
 #navBar ul li {
@@ -58,23 +57,15 @@ a{
     transition: box-shadow 0.3s ease; 
 }
 
-#navBar ul li a:hover {
-    font-size: 25px;
-    border: 2px solid;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgb(240, 233, 233,1.0);
-    padding: 5px;
-}
-
 .menu-toggle {
     display: block; 
-    font-size: 26px;
+    font-size: 18px;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    margin: 0 auto; /* Centers the menu icon horizontally in the navbar */
+    margin: 0 auto; 
+    padding: 0;
 }
 
 #hero{
@@ -95,12 +86,12 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding:10px;
+    margin-top: -30px;
 }
 
 #subProjects{
     width:90%;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     border-radius:10px;
 }
@@ -213,10 +204,49 @@ footer a {
 }
 
 @media(min-width: 700px){
+    /* Hides the toggle button and restores normal horizontal navbar on desktop */
+    .menu-toggle {
+        display: none;
+    }
+    
+    #navBar {
+        height: 60px;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #navBar ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #navBar ul li {
+        width: auto;
+        text-align: left;
+        padding: 10px;
+    }
+
+    #navBar ul li a:hover {
+        font-size: 25px;
+        border: 2px solid;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgb(240, 233, 233,1.0);
+        padding: 5px;
+    }
+    
     #projects{
         width: 100%;
         display: flex;
         justify-content: center;
+        margin-top: 0px;
+    }
+    #subProjects{
+        width:90%;
+        border:3px solid black;
+        margin: 10px;
+        padding: 10px;
+        border-radius:10px;
     }
     .pSub{
         display: flex;
@@ -225,6 +255,10 @@ footer a {
     }
     .pCss:hover {
         transform: scale(1.1);
+    }
+    .pCss img{
+        height: 200px;
+        object-fit: cover;
     }
     #pLfr{
         text-align: center;
