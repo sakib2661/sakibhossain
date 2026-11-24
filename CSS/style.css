@@ -251,7 +251,10 @@ footer a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     text-align: center;
     font-size: 14px;
-    color: #a8b5c4;
+}
+
+.footer-bottom p{
+    color: white;
 }
 
 
