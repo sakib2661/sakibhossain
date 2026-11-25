@@ -10,11 +10,62 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/eeeDay2026.css" />
+    <link rel="stylesheet" href="../CSS/duet2025.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div data-include="components/header.html"></div>
+
+    <div id="container">
+      <main>
+        <h1>DUET TechFest 2025 | Line Following Segment</h1>
+
+        <div class="ctx">
+          <div id="vidCnt">
+            <video id="teamVideo" controls preload="metadata" playsinline>
+              <source src="../VIDEOS/duet2025.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <p>
+            In <b>December 2025</b>, I participated in <b>DUET TechFest 2025</b> in the <b>Line Following</b> segment. Competing on an unfamiliar track under time and checkpoint pressure made every sensor reading, power rail, and motor response count.
+          </p>
+          <p>
+            <b>Event Details:</b> December 2025 &bull; DUET TechFest 2025 &bull; Segment: Line Following
+          </p>
+        </div>
+
+        <div class="ctx">
+          <h2>Hardware &amp; Equipment Used</h2>
+          <div>
+            <p>
+              Our line-following robot was built around a compact control and power architecture using the following equipment:
+            </p>
+            <ul>
+              <li><b>Buck module LM2569</b> (regulated step-down power conversion)</li>
+              <li><b>Boost module XL6000</b> (step-up voltage support where needed)</li>
+              <li><b>2x 3.7V lithium-ion batteries</b> (dual-cell pack powering the system)</li>
+              <li><b>Arduino Nano</b> (main microcontroller handling sensor reads and control logic)</li>
+              <li><b>LM298D motor driver</b> (driving the left and right motors)</li>
+              <li><b>5-channel digital IR sensor array</b> (detecting track path and line position)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ctx">
+          <h2>What I Learned</h2>
+          <div>
+            <p>
+              My bot used too much jerking because it was not tuned properly, so I could not pass the second checkpoint.
+            </p>
+            <p>
+              Excessive jerking on sharp turns and straights disrupts smooth line tracking and wastes momentum on technical sections. Proper PID / speed and steering tuning, smoother motor transitions, and track-side calibration are essential before attempting high-speed checkpoint runs.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <div data-include="components/footer.html"></div>
 

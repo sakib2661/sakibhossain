@@ -16,6 +16,52 @@
   <body>
     <div data-include="components/header.html"></div>
 
+    <div id="container">
+      <main>
+        <h1>EEE Day 3.0 | Line Following Robot (LFR) Segment</h1>
+
+        <div class="ctx">
+          <div id="vidCnt">
+            <video id="teamVideo" controls preload="metadata" playsinline>
+              <source src="../VIDEOS/sub.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <p>
+            In <b>EEE Day 3.0</b>, I participated in the <b>Line Following Robot (LFR)</b> segment. Competing on the track tested how reliably my robot could read the path and react in real time.
+          </p>
+          <p>
+            <b>Event Details:</b> EEE Day 3.0 &bull; Segment: Line Following Robot (LFR)
+          </p>
+        </div>
+
+        <div class="ctx">
+          <h2>Problem Faced: Line Detection Issue</h2>
+          <div>
+            <p>
+              During the competition, I faced a sensor problem because I used a <b>digital sensor</b>.
+            </p>
+            <p>
+              My bot could not detect the line properly, making reliable path tracking difficult when surface lighting, contrast, or track conditions shifted.
+            </p>
+          </div>
+        </div>
+
+        <div class="ctx">
+          <h2>What I Learned</h2>
+          <div>
+            <p>
+              For a basic LFR bot, a digital sensor is okay, but in competitive robotics, an analog sensor is best.
+            </p>
+            <p>
+              Digital sensors only give a simple high/low threshold decision, whereas analog readings let a competitive line follower resolve finer position differences and adapt better to real track variations.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
     <div data-include="components/social.html"></div>
 
     <div data-include="components/footer.html"></div>
